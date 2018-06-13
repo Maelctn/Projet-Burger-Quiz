@@ -27,7 +27,7 @@
 		LOGIN : <input type="text" name="inscrip_login" onblur="VerifInscrip_Login(this)"/> <br>
 		PASSWORD : <input type="password" name="inscrip_pwd" onblur="VerifInscrip_Pwd(this)"/> <br>
 		PASSWORD : <input type="password" name="verif_inscrip_pwd" onblur="VerifInscrip_Pwd2(this)"/> <br>
-		<input type="submit" value="VALIDER" /> <br>
+		<input type="submit" value="VALIDER" onsubmit="return verifForm(this)" /> <br>
 	</form>		 
 </section>
 
