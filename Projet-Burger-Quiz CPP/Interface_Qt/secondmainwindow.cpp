@@ -6,6 +6,7 @@ SecondMainWindow::SecondMainWindow(QWidget *parent, Driver* driver, Connection *
     ui(new Ui::SecondMainWindow)
 {
 
+
     ui->setupUi(this);
     ui->table_joueur->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->table_partie->setSelectionBehavior(QAbstractItemView::SelectRows);
