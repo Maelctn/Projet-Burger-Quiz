@@ -1,0 +1,253 @@
+/*######### HEADER #########*/
+header{
+	background-color: #FFDED1;	
+	padding-bottom:%;
+}
+
+header a:first-child img{
+	width: 10%;
+	height: 10%;
+	padding-top: 1%;
+	padding-left: 1%;
+}
+
+header h1{
+  width: auto;
+	display: inline;
+	font-size: 5em;
+	margin-left: 20%;
+	padding-right: 18%;
+	font-family: 'Carter One', cursive;
+	color: #E8601A;
+}
+
+header a:last-child img{
+	width: 14%;
+	height: 14%;
+}
+
+/*######### FOOTER #########*/
+footer{
+  background-color:;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-left:1%;
+	margin-top: 1%;
+	background-color: #FFDED1;
+}
+
+footer div:last-child{
+	margin-left: 93%;
+	margin-top : -3%;
+}
+
+#footer_index{
+	margin-top: 4%;
+}
+
+#footer_menu{
+	margin-top: 7%;
+}
+
+#footer_choix_partie{
+	margin-top: 19.5%;
+}
+/*######### SECTION INDEX.PHP #########*/
+#section_index{
+	font-family: 'Carter One', cursive;
+	margin-top: 5%;
+}
+
+#section_index h2{
+	margin-left: 42%;
+	margin-bottom: 2%;
+	color: #FF9C69;
+}
+
+#section_index form{
+	margin-left: 36%;
+}
+
+#section_index input{
+	margin-bottom: 2%;
+	margin-left: 1%;
+	border : 2px solid #CC5417;
+	border-radius: 0px 10px 0px 10px;
+	padding: 0.5%;
+}
+
+#section_index input[type='text']{
+  margin-left: 4.3%;
+}
+
+#section_index input[type='submit']{
+	font-family: 'Carter One', cursive;
+	margin-left: 10%;
+	margin-top: 1%;
+	padding: 1% 2% 1% 2%; 
+	border-radius: 20px;
+	font-size: 1.2em;
+	color: #FF9C69;
+	background-color: #CC5417;
+	border: 0px solid black;
+}
+
+/*######### SECTION MENU.HTML #########*/
+#section_menu a div h2{
+	font-family: 'Carter One', cursive;
+	width: auto;
+	display: inline-block;
+	border-radius: 20px;
+	font-size: 2em;
+	margin-top: 6%;
+	padding: 1%;
+	background-color: #CC5417;
+	color: #FF9C69;
+	border: 0px solid black;
+}
+
+#section_menu a:first-child div h2{
+  margin-left: 38%;
+}
+
+#section_menu a:nth-child(2) div h2{
+ margin-left: 32%;
+}
+
+#section_menu a:last-child div h2{
+  margin-left: 41%;
+}
+	
+/*######### SECTION CHOIX_PARTIE.PHP #########*/
+#section_choix_partie h2{
+	margin-left: 38%;
+	margin-top: 8%;
+	color : #CC5417;
+	font-size: 2em;
+	font-family: 'Carter One', cursive;
+}
+
+#section_choix_partie form{
+	margin-left: 42%;
+	margin-top: 3%;
+}
+
+#section_choix_partie select{
+	margin-left: 3%;
+	font-size: 1.8em;
+}
+
+#section_choix_partie input[type='submit']{
+	margin-top: 7%;
+	font-family: 'Carter One', cursive;
+	padding: 1% 2% 1% 2%; 
+	border-radius: 20px;
+	font-size: 2em;
+	color: #FF9C69;
+	background-color: #CC5417;
+	border: 0px solid black;
+}
+
+/*######### SECTION PALMARES.HTML #########*/
+#section_palmares{
+	font-family: 'Carter One', cursive;
+}
+
+#section_palmares h3{
+  margin-left: 41%;	
+}
+
+#section_palmares h2{
+	width: auto;
+	display: inline-block;
+	font-size: 2em;
+	margin-right: -38%;
+	padding-left: 1%;
+	color : #CC5417;
+}
+
+#section_palmares img{
+	width: 4%;
+	height: 4%;
+	margin-top: 4%;
+	margin-left: 39%;
+}
+
+#section_palmares input[type='submit']{
+	font-family: 'Carter One', cursive;
+	margin-left: 39%;
+	margin-bottom: 5%;
+	padding: 1% 2% 1% 2%; 
+	border-radius: 20px;
+	font-size: 2em;
+	color: #FF9C69;
+	background-color: #CC5417;
+	border: 0px solid black;
+}
+
+#section_palmares table{
+	margin-left: 33%;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	width: 30%;
+	font-size: 1.5em;
+}
+
+#section_palmares td{
+	border: 1px solid black;
+}
+/*######### SECTION NOUVELLE_PARTIE.PHP / CHOIX.PHP #########*/
+#section_nouvelle_partie input[name='chronotime'], #section_choix input[name='chronotime']{
+	font-family: 'Carter One', cursive;
+  font-size: 4em;
+	width: 340px;
+	padding: 2%;
+	margin-left: 38%;
+	margin-bottom: -10%;
+	border-radius: 0px 30px 0px 30px;
+	border : 4px solid #CC5417;
+}
+
+#section_nouvelle_partie form, #section_choix form{
+	font-family: 'Carter One', cursive;
+	margin-top: 3%;
+}
+
+#section_nouvelle_partie h2, #section_choix h2{
+	font-size: 2em;
+	margin-bottom: 1%;
+	margin-top: 7%;
+	color : #CC5417;
+}
+
+#section_nouvelle_partie h3, #section_choix h3{
+	font-size: 1.8em;
+	color: #FF9C69;
+}
+
+#section_nouvelle_partie input, #section_choix input{
+	margin-left: 15%;
+}
+
+#section_nouvelle_partie label, #section_choix label{
+	font-size: 2.1em;
+	margin-left: 1%;
+}
+
+
+#section_nouvelle_partie input[type='radio'], #section_choix input[type='radio']{
+  height: 2em;
+  width: 2em;
+}
+
+#section_nouvelle_partie input[type='submit'], #section_choix input[type='submit']{
+	margin-left: 45%;
+	margin-top: 5%;
+	margin-bottom: 6%;
+	padding: 1% 2% 1% 2%; 
+	border-radius: 20px;
+	font-size: 2em;
+	color: #FF9C69;
+	background-color: #CC5417;
+	border: 0px solid black;
+}
