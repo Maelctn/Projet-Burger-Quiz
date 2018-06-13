@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SecondMainWindow</class>
+ <widget class="QMainWindow" name="SecondMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>565</width>
+    <height>431</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QToolButton" name="toolButton">
+      <property name="text">
+       <string>Rafraichir</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="layout_tableau">
+      <item>
+       <widget class="QTabWidget" name="tableau_onglet">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizeIncrement">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="onglet_joueur">
+         <attribute name="title">
+          <string>Joueur</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <layout class="QHBoxLayout" name="layout_joueur">
+            <item>
+             <layout class="QVBoxLayout" name="layout_table_joueur">
+              <item>
+               <widget class="QTableWidget" name="table_joueur">
+                <property name="lineWidth">
+                 <number>1</number>
+                </property>
+                <attribute name="horizontalHeaderStretchLastSection">
+                 <bool>true</bool>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>id_login</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Login</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Password</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Best_score</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="supprimer_joueur">
+                <property name="text">
+                 <string>SUPPRIMER</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="layout_champs_joueur">
+              <item>
+               <layout class="QHBoxLayout" name="layou_login">
+                <item>
+                 <widget class="QLabel" name="label_login">
+                  <property name="text">
+                   <string>Login </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="line_login"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_password">
+                <item>
+                 <widget class="QLabel" name="label_password">
+                  <property name="text">
+                   <string>Password </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="line_password">
+                  <property name="echoMode">
+                   <enum>QLineEdit::Password</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkBox_password">
+                <property name="text">
+                 <string>Ne pas modifier le mot de passe</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_bestscore">
+                <item>
+                 <widget class="QLabel" name="label_bestscore">
+                  <property name="text">
+                   <string>Best score </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="line_bestscore">
+                  <property name="maximum">
+                   <number>100000</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_bestscore">
+                  <property name="text">
+                   <string>Pas de best score</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkBox_score_only">
+                <property name="text">
+                 <string>Modifier uniquement le best score</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_button_joueur">
+                <item>
+                 <widget class="QPushButton" name="inserer_joueur">
+                  <property name="text">
+                   <string>INSERER</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="modifier_joueur">
+                  <property name="text">
+                   <string>MODIFIER</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="onglet_partie">
+         <attribute name="title">
+          <string>Partie</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <layout class="QHBoxLayout" name="layout_partie">
+            <item>
+             <layout class="QVBoxLayout" name="layout_table_partie">
+              <item>
+               <widget class="QTableWidget" name="table_partie">
+                <attribute name="horizontalHeaderStretchLastSection">
+                 <bool>true</bool>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>id_partie</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Score</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Nouvelle colonne</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Question 2</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Question 3</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="supprimer_partie">
+                <property name="text">
+                 <string>SUPPRIMER</string>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>16</width>
+                  <height>16</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="layout_champs_partie">
+              <item>
+               <layout class="QHBoxLayout" name="layout_score">
+                <item>
+                 <widget class="QLabel" name="label_score">
+                  <property name="text">
+                   <string>Score </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="line_score">
+                  <property name="maximum">
+                   <number>100000</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_score">
+                  <property name="text">
+                   <string>Pas de score</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkBox_score2">
+                <property name="text">
+                 <string>Modifier uniquement le score</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_q1">
+                <item>
+                 <widget class="QLabel" name="label_q1">
+                  <property name="text">
+                   <string>Question 1 </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_q1"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_q2">
+                <item>
+                 <widget class="QLabel" name="label_q2">
+                  <property name="text">
+                   <string>Question 2 </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_q2"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_q3">
+                <item>
+                 <widget class="QLabel" name="label_q3">
+                  <property name="text">
+                   <string>Question 3 </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_q3"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_button_partie">
+                <item>
+                 <widget class="QPushButton" name="inserer_partie">
+                  <property name="text">
+                   <string>INSERER</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="modifier_partie">
+                  <property name="text">
+                   <string>MODIFIER</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="onglet_theme">
+         <attribute name="title">
+          <string>Thème</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <layout class="QHBoxLayout" name="layout_theme">
+            <item>
+             <layout class="QVBoxLayout" name="layout_table_theme">
+              <item>
+               <widget class="QTableWidget" name="table_theme">
+                <attribute name="horizontalHeaderStretchLastSection">
+                 <bool>true</bool>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>id_theme</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Thème</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="supprimer_theme">
+                <property name="text">
+                 <string>SUPPRIMER</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="layout_champs_theme">
+              <item>
+               <layout class="QHBoxLayout" name="layout_line_theme">
+                <item>
+                 <widget class="QLabel" name="label_theme">
+                  <property name="text">
+                   <string>Thème </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="line_theme"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_button_theme">
+                <item>
+                 <widget class="QPushButton" name="inserer_theme">
+                  <property name="text">
+                   <string>INSERER</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="modifier_theme">
+                  <property name="text">
+                   <string>MODIFIER</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="onglet_question">
+         <attribute name="title">
+          <string>Question</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <layout class="QHBoxLayout" name="layout_question">
+            <item>
+             <layout class="QVBoxLayout" name="layout_table_question">
+              <item>
+               <widget class="QTableWidget" name="table_question">
+                <attribute name="horizontalHeaderStretchLastSection">
+                 <bool>true</bool>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>id_question</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Question</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Choix 1</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Choix 2</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>id_theme</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="supprimer_question">
+                <property name="text">
+                 <string>SUPPRIMER</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="layout_champs_question">
+              <item>
+               <layout class="QHBoxLayout" name="layout_choix_theme">
+                <item>
+                 <widget class="QLabel" name="label_choix_theme">
+                  <property name="text">
+                   <string>Thème </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_theme"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_line_question">
+                <item>
+                 <widget class="QLabel" name="label_question">
+                  <property name="text">
+                   <string>Question </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="line_question"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_choix1">
+                <item>
+                 <widget class="QLabel" name="label_choix1">
+                  <property name="text">
+                   <string>Choix 1 </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="line_choix1"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_choix2">
+                <item>
+                 <widget class="QLabel" name="label_choix2">
+                  <property name="text">
+                   <string>Choix 2 </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="line_choix2"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_button_question">
+                <item>
+                 <widget class="QPushButton" name="inserer_question">
+                  <property name="text">
+                   <string>INSERER</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="modifier_question">
+                  <property name="text">
+                   <string>MODIFIER</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="onglet_proposition">
+         <attribute name="title">
+          <string>Proposition</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <layout class="QHBoxLayout" name="layout_proposition">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinAndMaxSize</enum>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QVBoxLayout" name="layout_table_proposition">
+              <item>
+               <widget class="QTableWidget" name="table_proposition">
+                <attribute name="horizontalHeaderStretchLastSection">
+                 <bool>true</bool>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>id_proposition</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Proposition</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Réponse</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>id_question</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="supprimer_proposition">
+                <property name="text">
+                 <string>SUPPRIMER</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="layout_champs_proposition">
+              <item>
+               <layout class="QHBoxLayout" name="layout_choix_question">
+                <item>
+                 <widget class="QLabel" name="label_choix_question">
+                  <property name="text">
+                   <string>Question</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_question"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_line_proposition">
+                <item>
+                 <widget class="QLabel" name="label_proposition">
+                  <property name="text">
+                   <string>Proposition </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="line_proposition"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_choix_reponse">
+                <item>
+                 <widget class="QLabel" name="label_choix_reponse">
+                  <property name="text">
+                   <string>Réponse</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_reponse"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="button_proposition">
+                <item>
+                 <widget class="QPushButton" name="inserer_proposition">
+                  <property name="text">
+                   <string>INSERER</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="modifier_proposition">
+                  <property name="text">
+                   <string>MODIFIER</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="onglet_deconnexion">
+         <attribute name="title">
+          <string>Deconnexion</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QPushButton" name="button_deconnexion">
+            <property name="text">
+             <string>Deconnexion</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>565</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
