@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.5.1
+** Created by: Qt User Interface Compiler version 5.7.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -168,13 +168,13 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        groupBox->setTitle(QApplication::translate("MainWindow", "LogIn", 0));
-        label_ip->setText(QApplication::translate("MainWindow", "IP de la base de donn\303\251e", 0));
-        label_username->setText(QApplication::translate("MainWindow", "Username de la base de donn\303\251e ", 0));
-        label_password->setText(QApplication::translate("MainWindow", "Mot de passe de la base de don\303\251e", 0));
-        label_name->setText(QApplication::translate("MainWindow", "Nom de la base de don\303\251e", 0));
-        button_login->setText(QApplication::translate("MainWindow", "LogIn", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
+        groupBox->setTitle(QApplication::translate("MainWindow", "LogIn", Q_NULLPTR));
+        label_ip->setText(QApplication::translate("MainWindow", "IP de la base de donn\303\251e", Q_NULLPTR));
+        label_username->setText(QApplication::translate("MainWindow", "Username de la base de donn\303\251e ", Q_NULLPTR));
+        label_password->setText(QApplication::translate("MainWindow", "Mot de passe de la base de don\303\251e", Q_NULLPTR));
+        label_name->setText(QApplication::translate("MainWindow", "Nom de la base de don\303\251e", Q_NULLPTR));
+        button_login->setText(QApplication::translate("MainWindow", "LogIn", Q_NULLPTR));
     } // retranslateUi
 
 };

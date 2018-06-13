@@ -5,9 +5,9 @@
 #-------------------------------------------------
 
 QT       += core gui
-
+QT	 += widgets
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
+LIBS += -lmysqlcppconn
 TARGET = Project_Burger_Quiz
 TEMPLATE = app
 CONFIG += c++11
