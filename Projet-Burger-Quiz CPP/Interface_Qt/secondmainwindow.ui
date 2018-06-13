@@ -2,13 +2,28 @@
 <ui version="4.0">
  <class>SecondMainWindow</class>
  <widget class="QMainWindow" name="SecondMainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>629</width>
     <height>600</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>800</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -28,6 +43,12 @@
        <widget class="QTabWidget" name="tableau_onglet">
         <property name="enabled">
          <bool>true</bool>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1200</width>
+          <height>800</height>
+         </size>
         </property>
         <property name="sizeIncrement">
          <size>
@@ -55,6 +76,18 @@
              <layout class="QVBoxLayout" name="layout_table_joueur">
               <item>
                <widget class="QTableWidget" name="table_joueur">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>800</width>
+                  <height>600</height>
+                 </size>
+                </property>
                 <property name="lineWidth">
                  <number>1</number>
                 </property>
@@ -200,6 +233,12 @@
              <layout class="QVBoxLayout" name="layout_table_partie">
               <item>
                <widget class="QTableWidget" name="table_partie">
+                <property name="maximumSize">
+                 <size>
+                  <width>800</width>
+                  <height>600</height>
+                 </size>
+                </property>
                 <attribute name="horizontalHeaderStretchLastSection">
                  <bool>true</bool>
                 </attribute>
@@ -356,6 +395,12 @@
              <layout class="QVBoxLayout" name="layout_table_theme">
               <item>
                <widget class="QTableWidget" name="table_theme">
+                <property name="maximumSize">
+                 <size>
+                  <width>800</width>
+                  <height>600</height>
+                 </size>
+                </property>
                 <attribute name="horizontalHeaderStretchLastSection">
                  <bool>true</bool>
                 </attribute>
@@ -431,6 +476,12 @@
              <layout class="QVBoxLayout" name="layout_table_question">
               <item>
                <widget class="QTableWidget" name="table_question">
+                <property name="maximumSize">
+                 <size>
+                  <width>800</width>
+                  <height>600</height>
+                 </size>
+                </property>
                 <attribute name="horizontalHeaderStretchLastSection">
                  <bool>true</bool>
                 </attribute>
@@ -569,6 +620,12 @@
              <layout class="QVBoxLayout" name="layout_table_proposition">
               <item>
                <widget class="QTableWidget" name="table_proposition">
+                <property name="maximumSize">
+                 <size>
+                  <width>800</width>
+                  <height>600</height>
+                 </size>
+                </property>
                 <attribute name="horizontalHeaderStretchLastSection">
                  <bool>true</bool>
                 </attribute>
@@ -696,7 +753,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>629</width>
      <height>25</height>
     </rect>
    </property>

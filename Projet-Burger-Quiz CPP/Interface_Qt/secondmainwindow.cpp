@@ -6,7 +6,6 @@ SecondMainWindow::SecondMainWindow(QWidget *parent, Driver* driver, Connection *
     ui(new Ui::SecondMainWindow)
 {
 
-
     ui->setupUi(this);
     ui->table_joueur->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->table_partie->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -39,10 +38,25 @@ SecondMainWindow::SecondMainWindow(QWidget *parent, Driver* driver, Connection *
     rempli_tab_proposition();
     rempli_table_proposition();
 
-    charge_question();
-    charge_theme();
-    combobox_reponse_default();
-
+    if(tab_question.size()!=0){
+        charge_question();
+    }else{
+        ui->comboBox_q1->clear();
+        ui->comboBox_q2->clear();
+        ui->comboBox_q3->clear();
+        ui->comboBox_question->clear();
+        ui->comboBox_reponse->clear();
+    }
+    if(tab_theme.size()!=0){
+        charge_theme();
+    }else{
+        ui->comboBox_theme->clear();
+    }
+    if(tab_proposition.size()!=0){
+        combobox_reponse_default();
+    }else{
+        ui->comboBox_reponse->clear();
+    }
 }
 
 SecondMainWindow::~SecondMainWindow()
@@ -79,8 +93,20 @@ void SecondMainWindow::on_supprimer_joueur_clicked()
 
             rempli_tab_joueur();
             rempli_table_joueur();
-            charge_question();
-            charge_theme();
+            if(tab_question.size()!=0){
+                charge_question();
+            }else{
+                ui->comboBox_q1->clear();
+                ui->comboBox_q2->clear();
+                ui->comboBox_q3->clear();
+                ui->comboBox_question->clear();
+                ui->comboBox_reponse->clear();
+            }
+            if(tab_theme.size()!=0){
+                charge_theme();
+            }else{
+                ui->comboBox_theme->clear();
+            }
             QMessageBox::information(this,"Suppression","Suppression réussie");
               break;
           case QMessageBox::No:
@@ -115,8 +141,20 @@ void SecondMainWindow::on_supprimer_partie_clicked()
 
             rempli_tab_partie();
             rempli_table_partie();
-            charge_question();
-            charge_theme();
+            if(tab_question.size()!=0){
+                charge_question();
+            }else{
+                ui->comboBox_q1->clear();
+                ui->comboBox_q2->clear();
+                ui->comboBox_q3->clear();
+                ui->comboBox_question->clear();
+                ui->comboBox_reponse->clear();
+            }
+            if(tab_theme.size()!=0){
+                charge_theme();
+            }else{
+                ui->comboBox_theme->clear();
+            }
             QMessageBox::information(this,"Suppression","Suppression réussie");
               break;
           case QMessageBox::No:
@@ -145,8 +183,8 @@ void SecondMainWindow::on_supprimer_theme_clicked()
                 QString convert=tab_theme[ligne_suppr][0]->text();
                 QByteArray convert1 = convert.toUtf8();
                 string id_suppr = convert1.data();
-                ResultSet* res_theme;
-                ResultSet* res_suppr;
+                ResultSet* res_theme=NULL;
+                ResultSet* res_suppr=NULL;
 
                 res_theme=stmt->executeQuery("SELECT id_question FROM Question WHERE id_theme="+id_suppr);
                 while(res_theme->next()){
@@ -176,8 +214,20 @@ void SecondMainWindow::on_supprimer_theme_clicked()
             rempli_tab_proposition();
             rempli_table_proposition();
 
-            charge_question();
-            charge_theme();
+            if(tab_question.size()!=0){
+                charge_question();
+            }else{
+                ui->comboBox_q1->clear();
+                ui->comboBox_q2->clear();
+                ui->comboBox_q3->clear();
+                ui->comboBox_question->clear();
+                ui->comboBox_reponse->clear();
+            }
+            if(tab_theme.size()!=0){
+                charge_theme();
+            }else{
+                ui->comboBox_theme->clear();
+            }
             QMessageBox::information(this,"Suppression","Suppression réussie");
               break;
           case QMessageBox::No:
@@ -205,7 +255,7 @@ void SecondMainWindow::on_supprimer_question_clicked()
                 QString convert=tab_question[ligne_suppr][0]->text();
                 QByteArray convert1 = convert.toUtf8();
                 string id_suppr = convert1.data();
-                ResultSet* res_suppr;
+                ResultSet* res_suppr=NULL;
 
                 res_suppr=stmt->executeQuery("SELECT id_partie FROM Partie_Question WHERE id_question="+id_suppr);
                 while(res_suppr->next()){
@@ -225,8 +275,20 @@ void SecondMainWindow::on_supprimer_question_clicked()
             rempli_tab_proposition();
             rempli_table_proposition();
 
-            charge_question();
-            charge_theme();
+            if(tab_question.size()!=0){
+                charge_question();
+            }else{
+                ui->comboBox_q1->clear();
+                ui->comboBox_q2->clear();
+                ui->comboBox_q3->clear();
+                ui->comboBox_question->clear();
+                ui->comboBox_reponse->clear();
+            }
+            if(tab_theme.size()!=0){
+                charge_theme();
+            }else{
+                ui->comboBox_theme->clear();
+            }
             QMessageBox::information(this,"Suppression","Suppression réussie");
               break;
           case QMessageBox::No:
@@ -260,8 +322,20 @@ void SecondMainWindow::on_supprimer_proposition_clicked()
             rempli_tab_proposition();
             rempli_table_proposition();
 
-            charge_question();
-            charge_theme();
+            if(tab_question.size()!=0){
+                charge_question();
+            }else{
+                ui->comboBox_q1->clear();
+                ui->comboBox_q2->clear();
+                ui->comboBox_q3->clear();
+                ui->comboBox_question->clear();
+                ui->comboBox_reponse->clear();
+            }
+            if(tab_theme.size()!=0){
+                charge_theme();
+            }else{
+                ui->comboBox_theme->clear();
+            }
             QMessageBox::information(this,"Suppression","Suppression réussie");
               break;
           case QMessageBox::No:
@@ -273,7 +347,7 @@ void SecondMainWindow::on_supprimer_proposition_clicked()
 }
 
 void SecondMainWindow::charge_question(){
-    ResultSet* res_questions;
+    ResultSet* res_questions=NULL;
     ui->comboBox_q1->clear();
     ui->comboBox_q2->clear();
     ui->comboBox_q3->clear();
@@ -287,11 +361,15 @@ void SecondMainWindow::charge_question(){
         ui->comboBox_question->addItem((res_questions->getString(1)).c_str());
     }
     delete res_questions;
-    combobox_reponse_default();
+    if(tab_proposition.size()!=0){
+        combobox_reponse_default();
+    }else{
+        ui->comboBox_reponse->clear();
+    }
 }
 
 void SecondMainWindow::charge_theme(){
-    ResultSet* res_themes;
+    ResultSet* res_themes=NULL;
     ui->comboBox_theme->clear();
     res_themes=stmt->executeQuery("SELECT theme FROM Theme");
     while(res_themes->next()){
@@ -302,7 +380,7 @@ void SecondMainWindow::charge_theme(){
 
 void SecondMainWindow::on_comboBox_question_activated(const QString &arg1)
 {
-    ResultSet* res_quest;
+    ResultSet* res_quest=NULL;
     QByteArray convert = arg1.toUtf8();
     string question = convert.data();
     PreparedStatement* prepa_stmt=connect_bdd->prepareStatement("SELECT * FROM Question WHERE question=?");
@@ -318,7 +396,7 @@ void SecondMainWindow::on_comboBox_question_activated(const QString &arg1)
 }
 
 void SecondMainWindow::rempli_table_joueur(){
-    ResultSet* res_tabjoueur;
+    ResultSet* res_tabjoueur=NULL;
     res_tabjoueur=stmt->executeQuery("SELECT * FROM Joueur");
     int ligne_joueur=tab_joueur.size();
     int colonne_joueur=res_tabjoueur->getMetaData()->getColumnCount();
@@ -343,9 +421,9 @@ void SecondMainWindow::rempli_table_joueur(){
 }
 
 void SecondMainWindow::rempli_table_partie(){
-    ResultSet* res_tabpartie;
-    ResultSet* res_partie_question;
-    ResultSet* res_intitule_question;
+    ResultSet* res_tabpartie=NULL;
+    ResultSet* res_partie_question=NULL;
+    ResultSet* res_intitule_question=NULL;
     res_tabpartie=stmt->executeQuery("SELECT * FROM Partie");
     int ligne_partie=tab_partie.size();
     int colonne_partie=res_tabpartie->getMetaData()->getColumnCount()+3;
@@ -396,7 +474,7 @@ void SecondMainWindow::rempli_table_partie(){
 }
 
 void SecondMainWindow::rempli_table_theme(){
-    ResultSet* res_tabtheme;
+    ResultSet* res_tabtheme=NULL;
     res_tabtheme=stmt->executeQuery("SELECT * FROM Theme");
     int ligne_theme=tab_theme.size();
     int colonne_theme=res_tabtheme->getMetaData()->getColumnCount();
@@ -421,7 +499,7 @@ void SecondMainWindow::rempli_table_theme(){
 }
 
 void SecondMainWindow::rempli_table_question(){
-    ResultSet* res_tabquestion;
+    ResultSet* res_tabquestion=NULL;
     res_tabquestion=stmt->executeQuery("SELECT * FROM Question");
     int ligne_question=tab_question.size();
     int colonne_question=res_tabquestion->getMetaData()->getColumnCount();
@@ -446,7 +524,7 @@ void SecondMainWindow::rempli_table_question(){
 }
 
 void SecondMainWindow::rempli_table_proposition(){
-    ResultSet* res_tabproposition;
+    ResultSet* res_tabproposition=NULL;
     res_tabproposition=stmt->executeQuery("SELECT * FROM Proposition");
     int ligne_proposition=tab_proposition.size();
     int colonne_proposition=res_tabproposition->getMetaData()->getColumnCount();
@@ -471,7 +549,7 @@ void SecondMainWindow::rempli_table_proposition(){
 }
 
 void SecondMainWindow::rempli_tab_joueur(){
-    ResultSet* res_tabjoueur;
+    ResultSet* res_tabjoueur=NULL;
     res_tabjoueur=stmt->executeQuery("SELECT * FROM Joueur");
     int colonne_joueur=res_tabjoueur->getMetaData()->getColumnCount();
 
@@ -496,7 +574,7 @@ void SecondMainWindow::rempli_tab_joueur(){
 }
 
 void SecondMainWindow::rempli_tab_partie(){
-    ResultSet* res_tabpartie;
+    ResultSet* res_tabpartie=NULL;
     res_tabpartie=stmt->executeQuery("SELECT * FROM Partie");
     int colonne_partie=res_tabpartie->getMetaData()->getColumnCount();
 
@@ -521,7 +599,7 @@ void SecondMainWindow::rempli_tab_partie(){
 }
 
 void SecondMainWindow::rempli_tab_theme(){
-    ResultSet* res_tabtheme;
+    ResultSet* res_tabtheme=NULL;
     res_tabtheme=stmt->executeQuery("SELECT * FROM Theme");
     int colonne_theme=res_tabtheme->getMetaData()->getColumnCount();
 
@@ -546,7 +624,7 @@ void SecondMainWindow::rempli_tab_theme(){
 }
 
 void SecondMainWindow::rempli_tab_question(){
-    ResultSet* res_tabquestion;
+    ResultSet* res_tabquestion=NULL;
     res_tabquestion=stmt->executeQuery("SELECT * FROM Question");
     int colonne_question=res_tabquestion->getMetaData()->getColumnCount();
 
@@ -571,9 +649,9 @@ void SecondMainWindow::rempli_tab_question(){
 }
 
 void SecondMainWindow::rempli_tab_proposition(){
-    ResultSet* res_tabproposition;
-    ResultSet* res_proposition_rep;
-    ResultSet* res_choix;
+    ResultSet* res_tabproposition=NULL;
+    ResultSet* res_proposition_rep=NULL;
+    ResultSet* res_choix=NULL;
 
     res_tabproposition=stmt->executeQuery("SELECT * FROM Proposition");
     int colonne_proposition=res_tabproposition->getMetaData()->getColumnCount();
@@ -629,7 +707,7 @@ void SecondMainWindow::rempli_tab_proposition(){
 
 void SecondMainWindow::on_inserer_theme_clicked()
 {
-    ResultSet* res_theme;
+    ResultSet* res_theme=NULL;
     ResultSet* theme_length_max=stmt->executeQuery("SELECT CHARACTER_MAXIMUM_LENGTH AS length FROM information_schema.COLUMNS WHERE table_schema = '"+bdd+"' AND table_name = 'Theme' AND column_name = 'theme'");
     theme_length_max->next();
     string rep=theme_length_max->getString(1);
@@ -667,16 +745,28 @@ void SecondMainWindow::on_inserer_theme_clicked()
 
     rempli_tab_theme();
     rempli_table_theme();
-    charge_question();
-    charge_theme();
+    if(tab_question.size()!=0){
+        charge_question();
+    }else{
+        ui->comboBox_q1->clear();
+        ui->comboBox_q2->clear();
+        ui->comboBox_q3->clear();
+        ui->comboBox_question->clear();
+        ui->comboBox_reponse->clear();
+    }
+    if(tab_theme.size()!=0){
+        charge_theme();
+    }else{
+        ui->comboBox_theme->clear();
+    }
 }
 
 
 
 void SecondMainWindow::on_inserer_question_clicked()
 {
-    ResultSet* res_question;
-    ResultSet* res_theme;
+    ResultSet* res_question=NULL;
+    ResultSet* res_theme=NULL;
     ResultSet* question_length_max=stmt->executeQuery("SELECT CHARACTER_MAXIMUM_LENGTH AS length FROM information_schema.COLUMNS WHERE table_schema = '"+bdd+"' AND table_name = 'Question' AND column_name = 'question'");
     question_length_max->next();
     string rep=question_length_max->getString(1);
@@ -751,14 +841,26 @@ void SecondMainWindow::on_inserer_question_clicked()
 
     rempli_tab_question();
     rempli_table_question();
-    charge_question();
-    charge_theme();
+    if(tab_question.size()!=0){
+        charge_question();
+    }else{
+        ui->comboBox_q1->clear();
+        ui->comboBox_q2->clear();
+        ui->comboBox_q3->clear();
+        ui->comboBox_question->clear();
+        ui->comboBox_reponse->clear();
+    }
+    if(tab_theme.size()!=0){
+        charge_theme();
+    }else{
+        ui->comboBox_theme->clear();
+    }
 }
 
 void SecondMainWindow::on_inserer_proposition_clicked()
 {
-    ResultSet* res_proposition;
-    ResultSet* res_question;
+    ResultSet* res_proposition=NULL;
+    ResultSet* res_question=NULL;
     ResultSet* proposition_length_max=stmt->executeQuery("SELECT CHARACTER_MAXIMUM_LENGTH AS length FROM information_schema.COLUMNS WHERE table_schema = '"+bdd+"' AND table_name = 'Proposition' AND column_name = 'proposition'");
     proposition_length_max->next();
     string rep=proposition_length_max->getString(1);
@@ -813,12 +915,24 @@ void SecondMainWindow::on_inserer_proposition_clicked()
 
     rempli_tab_proposition();
     rempli_table_proposition();
-    charge_question();
-    charge_theme();
+    if(tab_question.size()!=0){
+        charge_question();
+    }else{
+        ui->comboBox_q1->clear();
+        ui->comboBox_q2->clear();
+        ui->comboBox_q3->clear();
+        ui->comboBox_question->clear();
+        ui->comboBox_reponse->clear();
+    }
+    if(tab_theme.size()!=0){
+        charge_theme();
+    }else{
+        ui->comboBox_theme->clear();
+    }
 }
 
 void SecondMainWindow::combobox_reponse_default(){
-    ResultSet* res_quest;
+    ResultSet* res_quest=NULL;
     res_quest=stmt->executeQuery("SELECT * FROM Question");
     res_quest->next();
     ui->comboBox_reponse->clear();
@@ -845,7 +959,7 @@ void SecondMainWindow::on_modifier_theme_clicked()
         QByteArray convert = convert1.toUtf8();
         string id_modif = convert.data();
 
-        ResultSet* res_theme;
+        ResultSet* res_theme=NULL;
         ResultSet* theme_length_max=stmt->executeQuery("SELECT CHARACTER_MAXIMUM_LENGTH AS length FROM information_schema.COLUMNS WHERE table_schema = '"+bdd+"' AND table_name = 'Theme' AND column_name = 'theme'");
         theme_length_max->next();
         string rep=theme_length_max->getString(1);
@@ -882,8 +996,20 @@ void SecondMainWindow::on_modifier_theme_clicked()
 
         rempli_tab_theme();
         rempli_table_theme();
-        charge_question();
-        charge_theme();
+        if(tab_question.size()!=0){
+            charge_question();
+        }else{
+            ui->comboBox_q1->clear();
+            ui->comboBox_q2->clear();
+            ui->comboBox_q3->clear();
+            ui->comboBox_question->clear();
+            ui->comboBox_reponse->clear();
+        }
+        if(tab_theme.size()!=0){
+            charge_theme();
+        }else{
+            ui->comboBox_theme->clear();
+        }
         }
     }
 }
@@ -906,8 +1032,8 @@ void SecondMainWindow::on_modifier_question_clicked()
             QByteArray convert = convert1.toUtf8();
             string id_modif = convert.data();
 
-            ResultSet* res_question;
-            ResultSet* res_theme;
+            ResultSet* res_question=NULL;
+            ResultSet* res_theme=NULL;
             ResultSet* question_length_max=stmt->executeQuery("SELECT CHARACTER_MAXIMUM_LENGTH AS length FROM information_schema.COLUMNS WHERE table_schema = '"+bdd+"' AND table_name = 'Question' AND column_name = 'question'");
             question_length_max->next();
             string rep=question_length_max->getString(1);
@@ -983,8 +1109,20 @@ void SecondMainWindow::on_modifier_question_clicked()
 
             rempli_tab_question();
             rempli_table_question();
-            charge_question();
-            charge_theme();
+            if(tab_question.size()!=0){
+                charge_question();
+            }else{
+                ui->comboBox_q1->clear();
+                ui->comboBox_q2->clear();
+                ui->comboBox_q3->clear();
+                ui->comboBox_question->clear();
+                ui->comboBox_reponse->clear();
+            }
+            if(tab_theme.size()!=0){
+                charge_theme();
+            }else{
+                ui->comboBox_theme->clear();
+            }
         }
     }
 }
@@ -1007,8 +1145,8 @@ void SecondMainWindow::on_modifier_proposition_clicked()
             QByteArray convert = convert1.toUtf8();
             string id_modif = convert.data();
 
-            ResultSet* res_proposition;
-            ResultSet* res_question;
+            ResultSet* res_proposition=NULL;
+            ResultSet* res_question=NULL;
             ResultSet* proposition_length_max=stmt->executeQuery("SELECT CHARACTER_MAXIMUM_LENGTH AS length FROM information_schema.COLUMNS WHERE table_schema = '"+bdd+"' AND table_name = 'Proposition' AND column_name = 'proposition'");
             proposition_length_max->next();
             string rep=proposition_length_max->getString(1);
@@ -1063,8 +1201,20 @@ void SecondMainWindow::on_modifier_proposition_clicked()
 
             rempli_tab_proposition();
             rempli_table_proposition();
-            charge_question();
-            charge_theme();
+            if(tab_question.size()!=0){
+                charge_question();
+            }else{
+                ui->comboBox_q1->clear();
+                ui->comboBox_q2->clear();
+                ui->comboBox_q3->clear();
+                ui->comboBox_question->clear();
+                ui->comboBox_reponse->clear();
+            }
+            if(tab_theme.size()!=0){
+                charge_theme();
+            }else{
+                ui->comboBox_theme->clear();
+            }
 
         }
     }
@@ -1104,17 +1254,29 @@ void SecondMainWindow::on_modifier_partie_clicked()
 
                 rempli_tab_partie();
                 rempli_table_partie();
-                charge_question();
-                charge_theme();
+                if(tab_question.size()!=0){
+                    charge_question();
+                }else{
+                    ui->comboBox_q1->clear();
+                    ui->comboBox_q2->clear();
+                    ui->comboBox_q3->clear();
+                    ui->comboBox_question->clear();
+                    ui->comboBox_reponse->clear();
+                }
+                if(tab_theme.size()!=0){
+                    charge_theme();
+                }else{
+                    ui->comboBox_theme->clear();
+                }
 
             }else{
 
-                ResultSet* res_parties;
-                ResultSet* res_quest1;
-                ResultSet* res_quest2;
-                ResultSet* res_quest3;
+                ResultSet* res_parties=NULL;
+                ResultSet* res_quest1=NULL;
+                ResultSet* res_quest2=NULL;
+                ResultSet* res_quest3=NULL;
 
-                bool verification;
+                bool verification=false;
                 string quest1;
                 string quest2;
                 string quest3;
@@ -1196,8 +1358,20 @@ void SecondMainWindow::on_modifier_partie_clicked()
 
                         rempli_tab_partie();
                         rempli_table_partie();
-                        charge_question();
-                        charge_theme();
+                        if(tab_question.size()!=0){
+                            charge_question();
+                        }else{
+                            ui->comboBox_q1->clear();
+                            ui->comboBox_q2->clear();
+                            ui->comboBox_q3->clear();
+                            ui->comboBox_question->clear();
+                            ui->comboBox_reponse->clear();
+                        }
+                        if(tab_theme.size()!=0){
+                            charge_theme();
+                        }else{
+                            ui->comboBox_theme->clear();
+                        }
                     }else{
                         QMessageBox::warning(this,"Insertion partie","Cette partie existe déjà");
                     }
@@ -1211,10 +1385,10 @@ void SecondMainWindow::on_modifier_partie_clicked()
 
 void SecondMainWindow::on_inserer_partie_clicked()
 {
-    ResultSet* res_parties;
-    ResultSet* res_quest1;
-    ResultSet* res_quest2;
-    ResultSet* res_quest3;
+    ResultSet* res_parties=NULL;
+    ResultSet* res_quest1=NULL;
+    ResultSet* res_quest2=NULL;
+    ResultSet* res_quest3=NULL;
 
     bool verification;
     string quest1;
@@ -1286,8 +1460,20 @@ void SecondMainWindow::on_inserer_partie_clicked()
 
             rempli_tab_partie();
             rempli_table_partie();
-            charge_question();
-            charge_theme();
+            if(tab_question.size()!=0){
+                charge_question();
+            }else{
+                ui->comboBox_q1->clear();
+                ui->comboBox_q2->clear();
+                ui->comboBox_q3->clear();
+                ui->comboBox_question->clear();
+                ui->comboBox_reponse->clear();
+            }
+            if(tab_theme.size()!=0){
+                charge_theme();
+            }else{
+                ui->comboBox_theme->clear();
+            }
         }else{
             QMessageBox::warning(this,"Insertion partie","Cette partie existe déjà");
         }
@@ -1298,9 +1484,9 @@ void SecondMainWindow::on_inserer_partie_clicked()
 
 bool SecondMainWindow::verif(string id, string q1, string q2, string q3){
 
-    ResultSet* test1;
-    ResultSet* test2;
-    ResultSet* test3;
+    ResultSet* test1=NULL;
+    ResultSet* test2=NULL;
+    ResultSet* test3=NULL;
     bool verif1=false;
     bool verif2=false;
     bool verif3=false;
@@ -1330,7 +1516,7 @@ bool SecondMainWindow::verif(string id, string q1, string q2, string q3){
 
 void SecondMainWindow::on_inserer_joueur_clicked()
 {
-    ResultSet* res_joueur;
+    ResultSet* res_joueur=NULL;
     ResultSet* joueur_length_max=stmt->executeQuery("SELECT CHARACTER_MAXIMUM_LENGTH AS length FROM information_schema.COLUMNS WHERE table_schema = '"+bdd+"' AND table_name = 'Joueur' AND column_name = 'login'");
     joueur_length_max->next();
     string rep=joueur_length_max->getString(1);
@@ -1421,7 +1607,7 @@ void SecondMainWindow::on_modifier_joueur_clicked()
             string id_modif = convertl.data();
             string best_score=to_string(ui->line_bestscore->value());
 
-            ResultSet* res_joueur;
+            ResultSet* res_joueur=NULL;
             ResultSet* joueur_length_max=stmt->executeQuery("SELECT CHARACTER_MAXIMUM_LENGTH AS length FROM information_schema.COLUMNS WHERE table_schema = '"+bdd+"' AND table_name = 'Joueur' AND column_name = 'login'");
             joueur_length_max->next();
             string rep=joueur_length_max->getString(1);
@@ -1582,7 +1768,23 @@ void SecondMainWindow::on_toolButton_clicked()
     rempli_tab_proposition();
     rempli_table_proposition();
 
-    charge_question();
-    charge_theme();
-    combobox_reponse_default();
+    if(tab_question.size()!=0){
+        charge_question();
+    }else{
+        ui->comboBox_q1->clear();
+        ui->comboBox_q2->clear();
+        ui->comboBox_q3->clear();
+        ui->comboBox_question->clear();
+        ui->comboBox_reponse->clear();
+    }
+    if(tab_theme.size()!=0){
+        charge_theme();
+    }else{
+        ui->comboBox_theme->clear();
+    }
+    if(tab_proposition.size()!=0){
+        combobox_reponse_default();
+    }else{
+        ui->comboBox_reponse->clear();
+    }
 }
