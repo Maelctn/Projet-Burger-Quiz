@@ -10,7 +10,7 @@ echo "<h3> Votre score : ".$_SESSION["score"]. " points ! </h3>";
 /**
 * \brief Sélectionne dans la table Joueur le login et le meilleur score quand il n'est pas null.
 */
-$select_score = $bdd->prepare("SELECT login, best_score FROM Joueur WHERE best_score IS NOT NULL");
+$select_score = $bdd->prepare("SELECT login, best_score FROM Joueur WHERE best_score IS NOT NULL AND best_score>0");
 $select_score->execute();
 /**
 * \brief Crée un tableau d'objet Joueur contenant les login et les best_score

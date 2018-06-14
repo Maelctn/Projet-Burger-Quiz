@@ -17,7 +17,7 @@ Vérifier si présence de : LIBS += -lmysqlcppconn (en dessous greaterThan(QT_MA
 Executer la commande : qmake
 Puis la commande : make
 Lancer l'application : ./Projet_Burger_Quiz
-
+/!\ Si une erreur de compilation apparait, executer un "make clean" puis relancer la compilation /!\
 
 
 ########## APPLICATION PHP : ##########
@@ -26,7 +26,7 @@ Aller dans : Projet-Burger-Quiz/Projet-Burger-Quiz\ PHP/php
 
 Dans connexionBDD.php : 
 	Dans la variable $myDsn :
-		Changer "localhost" par l'adresse de votre base de données (laisser en localhost si 			vous êtes en local) 
+		Changer "localhost" par l'adresse de votre base de données (laisser en localhost si vous etes en local) 
 		Changer "Projet_Burger_Quiz" par le nom de votre base de données
 	Dans la variable $myUserDb :
 		Changer 'Projet_Burger_Quiz' par le login de votre base de données
