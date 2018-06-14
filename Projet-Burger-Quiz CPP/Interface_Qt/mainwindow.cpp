@@ -51,7 +51,7 @@ void MainWindow::on_button_login_clicked()
 
         driver = get_driver_instance();
 
-        con = driver->connect(inser_ip,inser_username,inser_password);
+        con = driver->connect("tcp://"+inser_ip+":3306",inser_username,inser_password);
 
         con->setSchema(inser_name);
 
