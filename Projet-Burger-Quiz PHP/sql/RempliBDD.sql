@@ -161,7 +161,7 @@ INSERT INTO `Proposition` (`id_proposition`, `proposition`, `reponse`, `id_quest
 INSERT INTO `Proposition` (`id_proposition`, `proposition`, `reponse`, `id_question`) VALUES (NULL, 'Steeve dit avoir plus de 140 de QI',1,16);
 INSERT INTO `Proposition` (`id_proposition`, `proposition`, `reponse`, `id_question`) VALUES (NULL, 'Surnommée Zouzou',1,17);
 INSERT INTO `Proposition` (`id_proposition`, `proposition`, `reponse`, `id_question`) VALUES (NULL, 'A un fan club officiel',3,17);
-INSERT INTO `Proposition` (`id_proposition`, `proposition`, `reponse`, `id_question`) VALUES (NULL, 'Sait faire de la byciclette',1,17);
+INSERT INTO `Proposition` (`id_proposition`, `proposition`, `reponse`, `id_question`) VALUES (NULL, 'Sait faire de la bicyclette',1,17);
 INSERT INTO `Proposition` (`id_proposition`, `proposition`, `reponse`, `id_question`) VALUES (NULL, 'Contient des bouts de caoutchouc',2,17);
 INSERT INTO `Proposition` (`id_proposition`, `proposition`, `reponse`, `id_question`) VALUES (NULL, 'A joué dans Batman 2',2,17);
 INSERT INTO `Proposition` (`id_proposition`, `proposition`, `reponse`, `id_question`) VALUES (NULL, 'A une grande bouche',3,17);
