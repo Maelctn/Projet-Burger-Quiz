@@ -39,7 +39,7 @@ $temps = $_POST['temps'];
 /**
 * \brief Calcul le score et arrondit à l'entier supérieur
 */ 
-$score = ceil(($bonne_rep+$mauvaise_rep)/$temps)*100;
+$score = ceil($bonne_rep-$temps*5);
 
 $select_joueur = $bdd->prepare("SELECT * FROM Joueur");
 $select_joueur->execute();
