@@ -39,7 +39,7 @@ $temps = $_POST['temps'];
 /**
 * \brief Calcul le score et arrondit à l'entier supérieur
 */ 
-$score = ceil(($bonne_rep/$temps)*10000);
+$score = ceil(($bonne_rep+$mauvaise_rep)/$temps);
 
 $select_joueur = $bdd->prepare("SELECT * FROM Joueur");
 $select_joueur->execute();
@@ -53,7 +53,7 @@ foreach ($joueurs as $joueur){
 		if($joueur->getBEST_SCORE() == NULL){
 			$inser_score = $bdd->prepare("UPDATE Joueur SET best_score= ".$score." WHERE id_login= ".$_SESSION["id_joueur"]);
 			$inser_score->execute();
-		}else if($joueur->getBEST_SCORE() != NULL ){	
+		}else if($joueur->getBEST_SCORE() != NULL){	
 			$inser_score = $bdd->prepare("UPDATE Joueur SET best_score= ".$score." WHERE id_login= ".$_SESSION["id_joueur"]." AND best_score < ".$score);
 			$inser_score->execute();
 		}
