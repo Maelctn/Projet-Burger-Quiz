@@ -33,3 +33,9 @@ Dans connexionBDD.php :
 	Dans la varibale $myPwdBd :
 		Changer 'mael' par le mot de passe de votre base de données 
 
+
+
+########## DOC : ##########
+
+Doc PHP/JS : /var/www/html/Php/ProjetFinal/Projet-Burger-Quiz PHP/doc/html : ouvrir index.html
+Doc CPP/Qt : /var/www/html/Php/ProjetFinal/Projet-Burger-Quiz CPP/Doc_Qt/html : ouvrir index.html
