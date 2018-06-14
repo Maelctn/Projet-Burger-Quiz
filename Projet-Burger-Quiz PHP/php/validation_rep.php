@@ -25,9 +25,9 @@ for($i=0; $i<$_SESSION["taille_tab"]; $i++){
 */
 for($k=0; $k<sizeof($tab_post); $k++){
 	if($tab_post[$k] == $_SESSION["reponse"][$k]){
-		$bonne_rep++;
+		$bonne_rep = $bonne_rep + 100;
 	}else{
-		$mauvaise_rep++;		
+		$mauvaise_rep = $mauvaise_rep - 5;		
 	}
 }
 
