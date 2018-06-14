@@ -55,6 +55,16 @@ void MainWindow::on_button_login_clicked()
 
         con->setSchema(inser_name);
 
+        Statement* statement=con->createStatement();
+
+        statement->executeQuery("SELECT * FROM Joue");
+        statement->executeQuery("SELECT * FROM Joueur");
+        statement->executeQuery("SELECT * FROM Partie");
+        statement->executeQuery("SELECT * FROM Partie_Question");
+        statement->executeQuery("SELECT * FROM Proposition");
+        statement->executeQuery("SELECT * FROM Question");
+        statement->executeQuery("SELECT * FROM Theme");
+
         QMessageBox::information(this,"Login","Informations de connexion correctes");
         hide();
         secondMainWindow=new SecondMainWindow(this, driver, con);

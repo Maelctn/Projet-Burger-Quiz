@@ -529,6 +529,7 @@ void SecondMainWindow::rempli_table_proposition(){
     int ligne_proposition=tab_proposition.size();
     int colonne_proposition=res_tabproposition->getMetaData()->getColumnCount();
     ui->table_proposition->clear();
+    //ui->table_proposition->viewport()->repaint();
     ui->table_proposition->setRowCount(ligne_proposition);
     ui->table_proposition->setColumnCount(colonne_proposition);
 
@@ -545,6 +546,8 @@ void SecondMainWindow::rempli_table_proposition(){
             ui->table_proposition->setCellWidget(i,j,tab_proposition[i][j]);
         }
     }
+    ui->table_proposition->viewport()->repaint();
+    QCoreApplication::processEvents();
     delete res_tabproposition;
 }
 

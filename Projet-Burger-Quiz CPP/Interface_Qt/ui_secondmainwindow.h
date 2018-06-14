@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'secondmainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.1
+** Created by: Qt User Interface Compiler version 5.5.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -157,7 +157,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(SecondMainWindow->sizePolicy().hasHeightForWidth());
         SecondMainWindow->setSizePolicy(sizePolicy);
-        SecondMainWindow->setMaximumSize(QSize(1200, 800));
+        SecondMainWindow->setMaximumSize(QSize(2000, 1600));
         centralwidget = new QWidget(SecondMainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -172,6 +172,7 @@ public:
         tableau_onglet = new QTabWidget(centralwidget);
         tableau_onglet->setObjectName(QStringLiteral("tableau_onglet"));
         tableau_onglet->setEnabled(true);
+        tableau_onglet->setMinimumSize(QSize(0, 0));
         tableau_onglet->setMaximumSize(QSize(1200, 800));
         tableau_onglet->setSizeIncrement(QSize(0, 0));
         tableau_onglet->setBaseSize(QSize(0, 0));
@@ -200,6 +201,7 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(table_joueur->sizePolicy().hasHeightForWidth());
         table_joueur->setSizePolicy(sizePolicy1);
+        table_joueur->setMinimumSize(QSize(400, 500));
         table_joueur->setMaximumSize(QSize(800, 600));
         table_joueur->setLineWidth(1);
         table_joueur->horizontalHeader()->setStretchLastSection(true);
@@ -322,6 +324,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
         table_partie->setHorizontalHeaderItem(4, __qtablewidgetitem8);
         table_partie->setObjectName(QStringLiteral("table_partie"));
+        table_partie->setMinimumSize(QSize(400, 0));
         table_partie->setMaximumSize(QSize(800, 600));
         table_partie->horizontalHeader()->setStretchLastSection(true);
 
@@ -447,6 +450,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
         table_theme->setHorizontalHeaderItem(1, __qtablewidgetitem10);
         table_theme->setObjectName(QStringLiteral("table_theme"));
+        table_theme->setMinimumSize(QSize(0, 0));
         table_theme->setMaximumSize(QSize(800, 600));
         table_theme->horizontalHeader()->setStretchLastSection(true);
 
@@ -521,6 +525,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem15 = new QTableWidgetItem();
         table_question->setHorizontalHeaderItem(4, __qtablewidgetitem15);
         table_question->setObjectName(QStringLiteral("table_question"));
+        table_question->setMinimumSize(QSize(400, 0));
         table_question->setMaximumSize(QSize(800, 600));
         table_question->horizontalHeader()->setStretchLastSection(true);
 
@@ -640,6 +645,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem19 = new QTableWidgetItem();
         table_proposition->setHorizontalHeaderItem(3, __qtablewidgetitem19);
         table_proposition->setObjectName(QStringLiteral("table_proposition"));
+        table_proposition->setMinimumSize(QSize(400, 0));
         table_proposition->setMaximumSize(QSize(800, 600));
         table_proposition->horizontalHeader()->setStretchLastSection(true);
 
@@ -757,90 +763,90 @@ public:
 
     void retranslateUi(QMainWindow *SecondMainWindow)
     {
-        SecondMainWindow->setWindowTitle(QApplication::translate("SecondMainWindow", "MainWindow", Q_NULLPTR));
-        toolButton->setText(QApplication::translate("SecondMainWindow", "Rafraichir", Q_NULLPTR));
+        SecondMainWindow->setWindowTitle(QApplication::translate("SecondMainWindow", "MainWindow", 0));
+        toolButton->setText(QApplication::translate("SecondMainWindow", "Rafraichir", 0));
         QTableWidgetItem *___qtablewidgetitem = table_joueur->horizontalHeaderItem(0);
-        ___qtablewidgetitem->setText(QApplication::translate("SecondMainWindow", "id_login", Q_NULLPTR));
+        ___qtablewidgetitem->setText(QApplication::translate("SecondMainWindow", "id_login", 0));
         QTableWidgetItem *___qtablewidgetitem1 = table_joueur->horizontalHeaderItem(1);
-        ___qtablewidgetitem1->setText(QApplication::translate("SecondMainWindow", "Login", Q_NULLPTR));
+        ___qtablewidgetitem1->setText(QApplication::translate("SecondMainWindow", "Login", 0));
         QTableWidgetItem *___qtablewidgetitem2 = table_joueur->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QApplication::translate("SecondMainWindow", "Password", Q_NULLPTR));
+        ___qtablewidgetitem2->setText(QApplication::translate("SecondMainWindow", "Password", 0));
         QTableWidgetItem *___qtablewidgetitem3 = table_joueur->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QApplication::translate("SecondMainWindow", "Best_score", Q_NULLPTR));
-        supprimer_joueur->setText(QApplication::translate("SecondMainWindow", "SUPPRIMER", Q_NULLPTR));
-        label_login->setText(QApplication::translate("SecondMainWindow", "Login ", Q_NULLPTR));
-        label_password->setText(QApplication::translate("SecondMainWindow", "Password ", Q_NULLPTR));
-        checkBox_password->setText(QApplication::translate("SecondMainWindow", "Ne pas modifier le mot de passe", Q_NULLPTR));
-        label_bestscore->setText(QApplication::translate("SecondMainWindow", "Best score ", Q_NULLPTR));
-        checkBox_bestscore->setText(QApplication::translate("SecondMainWindow", "Pas de best score", Q_NULLPTR));
-        checkBox_score_only->setText(QApplication::translate("SecondMainWindow", "Modifier uniquement le best score", Q_NULLPTR));
-        inserer_joueur->setText(QApplication::translate("SecondMainWindow", "INSERER", Q_NULLPTR));
-        modifier_joueur->setText(QApplication::translate("SecondMainWindow", "MODIFIER", Q_NULLPTR));
-        tableau_onglet->setTabText(tableau_onglet->indexOf(onglet_joueur), QApplication::translate("SecondMainWindow", "Joueur", Q_NULLPTR));
+        ___qtablewidgetitem3->setText(QApplication::translate("SecondMainWindow", "Best_score", 0));
+        supprimer_joueur->setText(QApplication::translate("SecondMainWindow", "SUPPRIMER", 0));
+        label_login->setText(QApplication::translate("SecondMainWindow", "Login ", 0));
+        label_password->setText(QApplication::translate("SecondMainWindow", "Password ", 0));
+        checkBox_password->setText(QApplication::translate("SecondMainWindow", "Ne pas modifier le mot de passe", 0));
+        label_bestscore->setText(QApplication::translate("SecondMainWindow", "Best score ", 0));
+        checkBox_bestscore->setText(QApplication::translate("SecondMainWindow", "Pas de best score", 0));
+        checkBox_score_only->setText(QApplication::translate("SecondMainWindow", "Modifier uniquement le best score", 0));
+        inserer_joueur->setText(QApplication::translate("SecondMainWindow", "INSERER", 0));
+        modifier_joueur->setText(QApplication::translate("SecondMainWindow", "MODIFIER", 0));
+        tableau_onglet->setTabText(tableau_onglet->indexOf(onglet_joueur), QApplication::translate("SecondMainWindow", "Joueur", 0));
         QTableWidgetItem *___qtablewidgetitem4 = table_partie->horizontalHeaderItem(0);
-        ___qtablewidgetitem4->setText(QApplication::translate("SecondMainWindow", "id_partie", Q_NULLPTR));
+        ___qtablewidgetitem4->setText(QApplication::translate("SecondMainWindow", "id_partie", 0));
         QTableWidgetItem *___qtablewidgetitem5 = table_partie->horizontalHeaderItem(1);
-        ___qtablewidgetitem5->setText(QApplication::translate("SecondMainWindow", "Score", Q_NULLPTR));
+        ___qtablewidgetitem5->setText(QApplication::translate("SecondMainWindow", "Score", 0));
         QTableWidgetItem *___qtablewidgetitem6 = table_partie->horizontalHeaderItem(2);
-        ___qtablewidgetitem6->setText(QApplication::translate("SecondMainWindow", "Nouvelle colonne", Q_NULLPTR));
+        ___qtablewidgetitem6->setText(QApplication::translate("SecondMainWindow", "Nouvelle colonne", 0));
         QTableWidgetItem *___qtablewidgetitem7 = table_partie->horizontalHeaderItem(3);
-        ___qtablewidgetitem7->setText(QApplication::translate("SecondMainWindow", "Question 2", Q_NULLPTR));
+        ___qtablewidgetitem7->setText(QApplication::translate("SecondMainWindow", "Question 2", 0));
         QTableWidgetItem *___qtablewidgetitem8 = table_partie->horizontalHeaderItem(4);
-        ___qtablewidgetitem8->setText(QApplication::translate("SecondMainWindow", "Question 3", Q_NULLPTR));
-        supprimer_partie->setText(QApplication::translate("SecondMainWindow", "SUPPRIMER", Q_NULLPTR));
-        label_score->setText(QApplication::translate("SecondMainWindow", "Score ", Q_NULLPTR));
-        checkBox_score->setText(QApplication::translate("SecondMainWindow", "Pas de score", Q_NULLPTR));
-        checkBox_score2->setText(QApplication::translate("SecondMainWindow", "Modifier uniquement le score", Q_NULLPTR));
-        label_q1->setText(QApplication::translate("SecondMainWindow", "Question 1 ", Q_NULLPTR));
-        label_q2->setText(QApplication::translate("SecondMainWindow", "Question 2 ", Q_NULLPTR));
-        label_q3->setText(QApplication::translate("SecondMainWindow", "Question 3 ", Q_NULLPTR));
-        inserer_partie->setText(QApplication::translate("SecondMainWindow", "INSERER", Q_NULLPTR));
-        modifier_partie->setText(QApplication::translate("SecondMainWindow", "MODIFIER", Q_NULLPTR));
-        tableau_onglet->setTabText(tableau_onglet->indexOf(onglet_partie), QApplication::translate("SecondMainWindow", "Partie", Q_NULLPTR));
+        ___qtablewidgetitem8->setText(QApplication::translate("SecondMainWindow", "Question 3", 0));
+        supprimer_partie->setText(QApplication::translate("SecondMainWindow", "SUPPRIMER", 0));
+        label_score->setText(QApplication::translate("SecondMainWindow", "Score ", 0));
+        checkBox_score->setText(QApplication::translate("SecondMainWindow", "Pas de score", 0));
+        checkBox_score2->setText(QApplication::translate("SecondMainWindow", "Modifier uniquement le score", 0));
+        label_q1->setText(QApplication::translate("SecondMainWindow", "Question 1 ", 0));
+        label_q2->setText(QApplication::translate("SecondMainWindow", "Question 2 ", 0));
+        label_q3->setText(QApplication::translate("SecondMainWindow", "Question 3 ", 0));
+        inserer_partie->setText(QApplication::translate("SecondMainWindow", "INSERER", 0));
+        modifier_partie->setText(QApplication::translate("SecondMainWindow", "MODIFIER", 0));
+        tableau_onglet->setTabText(tableau_onglet->indexOf(onglet_partie), QApplication::translate("SecondMainWindow", "Partie", 0));
         QTableWidgetItem *___qtablewidgetitem9 = table_theme->horizontalHeaderItem(0);
-        ___qtablewidgetitem9->setText(QApplication::translate("SecondMainWindow", "id_theme", Q_NULLPTR));
+        ___qtablewidgetitem9->setText(QApplication::translate("SecondMainWindow", "id_theme", 0));
         QTableWidgetItem *___qtablewidgetitem10 = table_theme->horizontalHeaderItem(1);
-        ___qtablewidgetitem10->setText(QApplication::translate("SecondMainWindow", "Th\303\250me", Q_NULLPTR));
-        supprimer_theme->setText(QApplication::translate("SecondMainWindow", "SUPPRIMER", Q_NULLPTR));
-        label_theme->setText(QApplication::translate("SecondMainWindow", "Th\303\250me ", Q_NULLPTR));
-        inserer_theme->setText(QApplication::translate("SecondMainWindow", "INSERER", Q_NULLPTR));
-        modifier_theme->setText(QApplication::translate("SecondMainWindow", "MODIFIER", Q_NULLPTR));
-        tableau_onglet->setTabText(tableau_onglet->indexOf(onglet_theme), QApplication::translate("SecondMainWindow", "Th\303\250me", Q_NULLPTR));
+        ___qtablewidgetitem10->setText(QApplication::translate("SecondMainWindow", "Th\303\250me", 0));
+        supprimer_theme->setText(QApplication::translate("SecondMainWindow", "SUPPRIMER", 0));
+        label_theme->setText(QApplication::translate("SecondMainWindow", "Th\303\250me ", 0));
+        inserer_theme->setText(QApplication::translate("SecondMainWindow", "INSERER", 0));
+        modifier_theme->setText(QApplication::translate("SecondMainWindow", "MODIFIER", 0));
+        tableau_onglet->setTabText(tableau_onglet->indexOf(onglet_theme), QApplication::translate("SecondMainWindow", "Th\303\250me", 0));
         QTableWidgetItem *___qtablewidgetitem11 = table_question->horizontalHeaderItem(0);
-        ___qtablewidgetitem11->setText(QApplication::translate("SecondMainWindow", "id_question", Q_NULLPTR));
+        ___qtablewidgetitem11->setText(QApplication::translate("SecondMainWindow", "id_question", 0));
         QTableWidgetItem *___qtablewidgetitem12 = table_question->horizontalHeaderItem(1);
-        ___qtablewidgetitem12->setText(QApplication::translate("SecondMainWindow", "Question", Q_NULLPTR));
+        ___qtablewidgetitem12->setText(QApplication::translate("SecondMainWindow", "Question", 0));
         QTableWidgetItem *___qtablewidgetitem13 = table_question->horizontalHeaderItem(2);
-        ___qtablewidgetitem13->setText(QApplication::translate("SecondMainWindow", "Choix 1", Q_NULLPTR));
+        ___qtablewidgetitem13->setText(QApplication::translate("SecondMainWindow", "Choix 1", 0));
         QTableWidgetItem *___qtablewidgetitem14 = table_question->horizontalHeaderItem(3);
-        ___qtablewidgetitem14->setText(QApplication::translate("SecondMainWindow", "Choix 2", Q_NULLPTR));
+        ___qtablewidgetitem14->setText(QApplication::translate("SecondMainWindow", "Choix 2", 0));
         QTableWidgetItem *___qtablewidgetitem15 = table_question->horizontalHeaderItem(4);
-        ___qtablewidgetitem15->setText(QApplication::translate("SecondMainWindow", "id_theme", Q_NULLPTR));
-        supprimer_question->setText(QApplication::translate("SecondMainWindow", "SUPPRIMER", Q_NULLPTR));
-        label_choix_theme->setText(QApplication::translate("SecondMainWindow", "Th\303\250me ", Q_NULLPTR));
-        label_question->setText(QApplication::translate("SecondMainWindow", "Question ", Q_NULLPTR));
-        label_choix1->setText(QApplication::translate("SecondMainWindow", "Choix 1 ", Q_NULLPTR));
-        label_choix2->setText(QApplication::translate("SecondMainWindow", "Choix 2 ", Q_NULLPTR));
-        inserer_question->setText(QApplication::translate("SecondMainWindow", "INSERER", Q_NULLPTR));
-        modifier_question->setText(QApplication::translate("SecondMainWindow", "MODIFIER", Q_NULLPTR));
-        tableau_onglet->setTabText(tableau_onglet->indexOf(onglet_question), QApplication::translate("SecondMainWindow", "Question", Q_NULLPTR));
+        ___qtablewidgetitem15->setText(QApplication::translate("SecondMainWindow", "id_theme", 0));
+        supprimer_question->setText(QApplication::translate("SecondMainWindow", "SUPPRIMER", 0));
+        label_choix_theme->setText(QApplication::translate("SecondMainWindow", "Th\303\250me ", 0));
+        label_question->setText(QApplication::translate("SecondMainWindow", "Question ", 0));
+        label_choix1->setText(QApplication::translate("SecondMainWindow", "Choix 1 ", 0));
+        label_choix2->setText(QApplication::translate("SecondMainWindow", "Choix 2 ", 0));
+        inserer_question->setText(QApplication::translate("SecondMainWindow", "INSERER", 0));
+        modifier_question->setText(QApplication::translate("SecondMainWindow", "MODIFIER", 0));
+        tableau_onglet->setTabText(tableau_onglet->indexOf(onglet_question), QApplication::translate("SecondMainWindow", "Question", 0));
         QTableWidgetItem *___qtablewidgetitem16 = table_proposition->horizontalHeaderItem(0);
-        ___qtablewidgetitem16->setText(QApplication::translate("SecondMainWindow", "id_proposition", Q_NULLPTR));
+        ___qtablewidgetitem16->setText(QApplication::translate("SecondMainWindow", "id_proposition", 0));
         QTableWidgetItem *___qtablewidgetitem17 = table_proposition->horizontalHeaderItem(1);
-        ___qtablewidgetitem17->setText(QApplication::translate("SecondMainWindow", "Proposition", Q_NULLPTR));
+        ___qtablewidgetitem17->setText(QApplication::translate("SecondMainWindow", "Proposition", 0));
         QTableWidgetItem *___qtablewidgetitem18 = table_proposition->horizontalHeaderItem(2);
-        ___qtablewidgetitem18->setText(QApplication::translate("SecondMainWindow", "R\303\251ponse", Q_NULLPTR));
+        ___qtablewidgetitem18->setText(QApplication::translate("SecondMainWindow", "R\303\251ponse", 0));
         QTableWidgetItem *___qtablewidgetitem19 = table_proposition->horizontalHeaderItem(3);
-        ___qtablewidgetitem19->setText(QApplication::translate("SecondMainWindow", "id_question", Q_NULLPTR));
-        supprimer_proposition->setText(QApplication::translate("SecondMainWindow", "SUPPRIMER", Q_NULLPTR));
-        label_choix_question->setText(QApplication::translate("SecondMainWindow", "Question", Q_NULLPTR));
-        label_proposition->setText(QApplication::translate("SecondMainWindow", "Proposition ", Q_NULLPTR));
-        label_choix_reponse->setText(QApplication::translate("SecondMainWindow", "R\303\251ponse", Q_NULLPTR));
-        inserer_proposition->setText(QApplication::translate("SecondMainWindow", "INSERER", Q_NULLPTR));
-        modifier_proposition->setText(QApplication::translate("SecondMainWindow", "MODIFIER", Q_NULLPTR));
-        tableau_onglet->setTabText(tableau_onglet->indexOf(onglet_proposition), QApplication::translate("SecondMainWindow", "Proposition", Q_NULLPTR));
-        button_deconnexion->setText(QApplication::translate("SecondMainWindow", "Deconnexion", Q_NULLPTR));
-        tableau_onglet->setTabText(tableau_onglet->indexOf(onglet_deconnexion), QApplication::translate("SecondMainWindow", "Deconnexion", Q_NULLPTR));
+        ___qtablewidgetitem19->setText(QApplication::translate("SecondMainWindow", "id_question", 0));
+        supprimer_proposition->setText(QApplication::translate("SecondMainWindow", "SUPPRIMER", 0));
+        label_choix_question->setText(QApplication::translate("SecondMainWindow", "Question", 0));
+        label_proposition->setText(QApplication::translate("SecondMainWindow", "Proposition ", 0));
+        label_choix_reponse->setText(QApplication::translate("SecondMainWindow", "R\303\251ponse", 0));
+        inserer_proposition->setText(QApplication::translate("SecondMainWindow", "INSERER", 0));
+        modifier_proposition->setText(QApplication::translate("SecondMainWindow", "MODIFIER", 0));
+        tableau_onglet->setTabText(tableau_onglet->indexOf(onglet_proposition), QApplication::translate("SecondMainWindow", "Proposition", 0));
+        button_deconnexion->setText(QApplication::translate("SecondMainWindow", "Deconnexion", 0));
+        tableau_onglet->setTabText(tableau_onglet->indexOf(onglet_deconnexion), QApplication::translate("SecondMainWindow", "Deconnexion", 0));
     } // retranslateUi
 
 };
