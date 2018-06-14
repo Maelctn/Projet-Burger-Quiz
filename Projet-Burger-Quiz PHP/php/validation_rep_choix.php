@@ -28,7 +28,7 @@ for($k=0; $k<sizeof($tab_post); $k++){
 	if($tab_post[$k] == $_SESSION["reponse_choix"][$k]){
 		$bonne_rep = $bonne_rep + 100;
 	}else{
-		$mauvaise_rep = $mauvaise_rep - 5;		
+		$mauvaise_rep++;		
 	}
 }
 
@@ -40,7 +40,7 @@ $temps = $_POST['temps'];
 /**
 * \brief Calcul le score et arrondit à l'entier supérieur
 */ 
-$score = ceil(($bonne_rep+$mauvaise_rep)/$temps)*100;
+$score = ceil($bonne_rep-$temps*5);
 
 $select_joueur = $bdd->prepare("SELECT * FROM Joueur");
 $select_joueur->execute();
