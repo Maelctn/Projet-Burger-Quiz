@@ -1,6 +1,6 @@
 ########## BASE DE DONNEES : ##########
 
-Aller dans : Projet-Burger-Quiz/Projet-Burger-Quiz\ PHP/sql
+Aller dans : /Projet-Burger-Quiz\ PHP/sql
 
 Importer dans la BDD le script : BDD.sql
 Puis importer le script : RempliBDD.sql
@@ -9,7 +9,7 @@ Puis importer le script : RempliBDD.sql
 
 ########## APPLICATION QT : ##########
 
-Aller dans : Projet-Burger-Quiz/Projet-Burger-Quiz\ CPP/Interface_Qt 
+Aller dans : /Projet-Burger-Quiz\ CPP/Interface_Qt 
 
 Vérifier si présence de : QT += widgets (en-dessous de QT += core gui), si non, l'ajouter.
 Vérifier si présence de : LIBS += -lmysqlcppconn (en dessous greaterThan(QT_MAJOR_VERSION, 4): QT += widgets), si non, l'ajouter.
@@ -22,7 +22,7 @@ Lancer l'application : ./Projet_Burger_Quiz
 
 ########## APPLICATION PHP : ##########
 
-Aller dans : Projet-Burger-Quiz/Projet-Burger-Quiz\ PHP/php
+Aller dans : /Projet-Burger-Quiz\ PHP/php
 
 Dans connexionBDD.php : 
 	Dans la variable $myDsn :
@@ -37,5 +37,5 @@ Dans connexionBDD.php :
 
 ########## DOC : ##########
 
-Doc PHP/JS : /var/www/html/Php/ProjetFinal/Projet-Burger-Quiz PHP/doc/html : ouvrir index.html
-Doc CPP/Qt : /var/www/html/Php/ProjetFinal/Projet-Burger-Quiz CPP/Doc_Qt/html : ouvrir index.html
+Doc PHP/JS : /Projet-Burger-Quiz PHP/doc/html : ouvrir index.html
+Doc CPP/Qt : /Projet-Burger-Quiz CPP/Doc_Qt/html : ouvrir index.html
